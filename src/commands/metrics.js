@@ -10,14 +10,14 @@ export default class Metrics extends Command {
     static description = 'open metrics dashboard'
     static help = 'opens the dashboard to the current application\'s metrics page'
     static needsAuth = true
-  
+
     static flags = {
       remote: flags.remote(),
-      app: flags.app({required: true}),
+      app: flags.app({required: true})
     }
-  
+
     async run () {
       let app = await this.heroku.get(`/apps/${this.flags.app}`)
       open(`${DashboardAppsURL}/${app.name}/metrics/web`)
     }
-  }
+}

@@ -13,7 +13,7 @@
     "build": "babel src -d lib --ignore '*.test.js'",
     "clean": "rimraf lib",
     "prepare": "npm run clean && npm run build",
-    "test": "flow check && eslint . && jest",
+    "test": "eslint . && jest",
     "release": "np"
   },
   "dependencies": {

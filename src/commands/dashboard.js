@@ -22,4 +22,3 @@ export default class Dashboard extends Command {
     open(`${DashboardAppsURL}/${app.name}`)
   }
 }
-
