@@ -90,7 +90,7 @@ ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-styles@^3.0.0, ansi-styles@^3.1.0:
+ansi-styles@^3.0.0, ansi-styles@^3.1.0, ansi-styles@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.0.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
@@ -553,7 +553,11 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
-cardinal@1.x:
+capture-stack-trace@^1.0.0:
+  version "1.0.0"
+  resolved "http://cli-npm.heroku.com/capture-stack-trace/-/capture-stack-trace-1.0.0/4a6fa07399c26bba47f0b2496b4d0fb408c5550d.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
+
+cardinal@1.x, cardinal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cardinal/-/cardinal-1.0.0.tgz#50e21c1b0aa37729f9377def196b5a9cec932ee9"
   dependencies:
@@ -753,6 +757,12 @@ core-js@^2.4.0, core-js@^2.5.0:
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
+
+create-error-class@^3.0.0:
+  version "3.0.2"
+  resolved "http://cli-npm.heroku.com/create-error-class/-/create-error-class-3.0.2/06be7abef947a3f14a30fd610671d401bca8b7b6.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
+  dependencies:
+    capture-stack-trace "^1.0.0"
 
 cross-spawn@^5.1.0:
   version "5.1.0"
@@ -1360,6 +1370,22 @@ globby@^5.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+got@^6.3.0:
+  version "6.7.1"
+  resolved "http://cli-npm.heroku.com/got/-/got-6.7.1/240cd05785a9a18e561dc1b44b41c763ef1e8db0.tgz#240cd05785a9a18e561dc1b44b41c763ef1e8db0"
+  dependencies:
+    create-error-class "^3.0.0"
+    duplexer3 "^0.1.4"
+    get-stream "^3.0.0"
+    is-redirect "^1.0.0"
+    is-retry-allowed "^1.0.0"
+    is-stream "^1.0.0"
+    lowercase-keys "^1.0.0"
+    safe-buffer "^5.0.1"
+    timed-out "^4.0.0"
+    unzip-response "^2.0.1"
+    url-parse-lax "^1.0.0"
+
 got@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/got/-/got-7.1.0.tgz#05450fd84094e6bbea56f451a43a9c289166385a"
@@ -1476,6 +1502,35 @@ hawk@~6.0.2:
     cryptiles "3.x.x"
     hoek "4.x.x"
     sntp "2.x.x"
+
+heroku-cli-util@^6.2.10:
+  version "6.2.10"
+  resolved "http://cli-npm.heroku.com/heroku-cli-util/-/heroku-cli-util-6.2.10/2dc1ad948213494e69f57842f0d965956dae2219.tgz#2dc1ad948213494e69f57842f0d965956dae2219"
+  dependencies:
+    ansi-escapes "^1.4.0"
+    ansi-styles "^3.2.0"
+    cardinal "^1.0.0"
+    chalk "^2.1.0"
+    co "^4.6.0"
+    got "^6.3.0"
+    heroku-client "^3.0.3"
+    lodash.ary "^4.1.1"
+    lodash.defaults "^4.2.0"
+    lodash.get "^4.4.2"
+    lodash.identity "^3.0.0"
+    lodash.keys "^4.2.0"
+    lodash.mapvalues "^4.6.0"
+    lodash.noop "^3.0.1"
+    lodash.partial "^4.2.1"
+    lodash.pickby "^4.6.0"
+    lodash.property "^4.4.2"
+    lodash.repeat "^4.1.0"
+    lodash.result "^4.5.2"
+    netrc-parser "^2.0.3"
+    opn "^3.0.3"
+    strip-ansi "^4.0.0"
+    supports-color "^3.1.2"
+    tunnel-agent "^0.6.0"
 
 heroku-client@^3.0.3:
   version "3.0.3"
@@ -1708,6 +1763,10 @@ is-primitive@^2.0.0:
 is-promise@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
+
+is-redirect@^1.0.0:
+  version "1.0.0"
+  resolved "http://cli-npm.heroku.com/is-redirect/-/is-redirect-1.0.0/1d03dded53bd8db0f30c26e4f95d36fc7c87dc24.tgz#1d03dded53bd8db0f30c26e4f95d36fc7c87dc24"
 
 is-resolvable@^1.0.0:
   version "1.0.0"
@@ -2213,6 +2272,10 @@ lodash.keys@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.keys/-/lodash.keys-4.2.0.tgz#a08602ac12e4fb83f91fc1fb7a360a4d9ba35205"
 
+lodash.mapvalues@^4.6.0:
+  version "4.6.0"
+  resolved "http://cli-npm.heroku.com/lodash.mapvalues/-/lodash.mapvalues-4.6.0/1bafa5005de9dd6f4f26668c30ca37230cc9689c.tgz#1bafa5005de9dd6f4f26668c30ca37230cc9689c"
+
 lodash.maxby@4.x:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.maxby/-/lodash.maxby-4.6.0.tgz#082240068f3c7a227aa00a8380e4f38cf0786e3d"
@@ -2221,13 +2284,25 @@ lodash.merge@4.x:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
 
+lodash.noop@^3.0.1:
+  version "3.0.1"
+  resolved "http://cli-npm.heroku.com/lodash.noop/-/lodash.noop-3.0.1/38188f4d650a3a474258439b96ec45b32617133c.tgz#38188f4d650a3a474258439b96ec45b32617133c"
+
 lodash.partial@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/lodash.partial/-/lodash.partial-4.2.1.tgz#49f3d8cfdaa3bff8b3a91d127e923245418961d4"
 
+lodash.pickby@^4.6.0:
+  version "4.6.0"
+  resolved "http://cli-npm.heroku.com/lodash.pickby/-/lodash.pickby-4.6.0/7dea21d8c18d7703a27c704c15d3b84a67e33aff.tgz#7dea21d8c18d7703a27c704c15d3b84a67e33aff"
+
 lodash.property@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.property/-/lodash.property-4.4.2.tgz#da07124821c6409d025f30db8df851314515bffe"
+
+lodash.repeat@^4.1.0:
+  version "4.1.0"
+  resolved "http://cli-npm.heroku.com/lodash.repeat/-/lodash.repeat-4.1.0/fc7de8131d8c8ac07e4b49f74ffe829d1f2bec44.tgz#fc7de8131d8c8ac07e4b49f74ffe829d1f2bec44"
 
 lodash.result@^4.5.2:
   version "4.5.2"
@@ -2471,6 +2546,12 @@ onetime@^2.0.0:
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   dependencies:
     mimic-fn "^1.0.0"
+
+opn@^3.0.3:
+  version "3.0.3"
+  resolved "http://cli-npm.heroku.com/opn/-/opn-3.0.3/b6d99e7399f78d65c3baaffef1fb288e9b85243a.tgz#b6d99e7399f78d65c3baaffef1fb288e9b85243a"
+  dependencies:
+    object-assign "^4.0.1"
 
 optimist@^0.6.1:
   version "0.6.1"
@@ -3283,6 +3364,10 @@ uid-number@^0.0.6:
 universalify@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.1.tgz#fa71badd4437af4c148841e3b3b165f9e9e590b7"
+
+unzip-response@^2.0.1:
+  version "2.0.1"
+  resolved "http://cli-npm.heroku.com/unzip-response/-/unzip-response-2.0.1/d2f0f737d16b0615e72a6935ed04214572d56f97.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
 
 unzip@^0.1.11:
   version "0.1.11"
