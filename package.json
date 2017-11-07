@@ -1,6 +1,6 @@
 {
   "name": "heroku-cli-dashboard",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "files": [
     "lib"
   ],
