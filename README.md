@@ -1,17 +1,12 @@
-heroku dashboard
+# heroku dashboard
 
-Opens up the dashboard for you
+Opens up the dashboard for you.
 
-# Install
+## Install
 
-## From Git
-heroku plugins:install https://github.com/freeformz/heroku-cli-dashboard
-
-## From NPM
 heroku plugins:install heroku-cli-dashboard
 
-
-# Help
+## Help
 
 ```console
 $ heroku dashboard --help
