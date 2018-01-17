@@ -4,13 +4,12 @@ import {open} from 'heroku-cli-util'
 import {Command, flags} from 'cli-engine-heroku'
 import {DashboardAppsURL} from '../misc'
 
-export default class Dashboard extends Command {
+export default class Activity extends Command {
   static topic = 'dashboard'
-  static command = 'open'
-  static description = 'opens dashboard to the overview page'
-  static help = 'opens the dashboard to an application\'s overview page'
+  static command = 'activity'
+  static description = "opens dashboard to the activity page"
+  static help = 'opens the dashboard to an application\'s activity page'
   static needsAuth = true
-  static aliases = ['dashboard']
 
   static flags = {
     remote: flags.remote(),
@@ -19,6 +18,6 @@ export default class Dashboard extends Command {
 
   async run () {
     let app = await this.heroku.get(`/apps/${this.flags.app}`)
-    open(`${DashboardAppsURL}/${app.name}`)
+    open(`${DashboardAppsURL}/${app.name}/activity`)
   }
 }
