@@ -1,7 +1,7 @@
 // @flow
 
 import {open} from 'heroku-cli-util'
-import {Command, flags} from 'cli-engine-heroku'
+import {flags} from 'cli-engine-heroku'
 import {DashboardAppsURL} from '../misc'
 
 import Dashboard from './dashboard'
@@ -13,9 +13,9 @@ export default class Metrics extends Dashboard {
 
   static flags = Object.assign(
     {type: flags.string({
-      description: "Process type formation to open to (default: web)",
+      description: 'Process type formation to open to (default: web)',
       parse: (input, cmd) => {
-        if (input === undefined) return "web"
+        if (input === undefined) return 'web'
         return input
       }
     })}, Dashboard.flags)

@@ -1,13 +1,15 @@
 // @flow
 
 import {open} from 'heroku-cli-util'
-import {Command, flags} from 'cli-engine-heroku'
+import {flags} from 'cli-engine-heroku'
 import {DashboardAppsURL} from '../misc'
 
-export default class Resources extends Command {
+import Dashboard from './dashboard'
+
+export default class Resources extends Dashboard {
   static topic = 'dashboard'
   static command = 'resources'
-  static description = "opens dashboard to the resources page"
+  static description = 'opens dashboard to the resources page'
   static help = 'opens the dashboard to an application\'s resources page'
   static needsAuth = true
 
