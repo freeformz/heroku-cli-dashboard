@@ -1,12 +1,9 @@
 // @flow
 
-import {open} from 'heroku-cli-util'
-import {flags} from 'cli-engine-heroku'
-import {DashboardAppsURL} from '../misc'
+import {Command, flags} from 'cli-engine-heroku'
+import {openApp} from '../misc'
 
-import Dashboard from './dashboard'
-
-export default class Resources extends Dashboard {
+export default class Resources extends Command {
   static topic = 'dashboard'
   static command = 'resources'
   static description = 'opens dashboard to the resources page'
@@ -15,11 +12,10 @@ export default class Resources extends Dashboard {
 
   static flags = {
     remote: flags.remote(),
-    app: flags.app()
+    app: flags.app({required: true})
   }
 
-  async run () {
-    let app = await this.heroku.get(`/apps/${this.flags.app}`)
-    open(`${DashboardAppsURL}/${app.name}/resources`)
+  run () {
+    openApp(this.heroku, this.flags.app, 'resources')
   }
 }
